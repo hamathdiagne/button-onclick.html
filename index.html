@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+ <head> 
+  <style>
+.first {color:blue;}
+.second {color:red;}
+</style> 
+ </head> 
+ <body> 
+  <script>
+        //button
+        var button = document.createElement ("button");
+        //set
+        function assign (){
+            return "display content";
+        }
+        button.innerHTML = eval ("assign ()");
+        //onclick
+        button.onclick = "changeColor ()";
+        //document
+        document.body.appendChild (button);
+        //p
+        var p = document.createElement ("p");
+        //set
+        p.innerHTML = "Bonjour, je suis marié et père d'une fille.\n";
+        //class
+        p.classList.toggle ("first","second");
+        //document
+        document.body.appendChild (p);
+        //event change
+        button.addEventListener ("click",function changeColor () { var el = document.querySelector ("p"); el.classList.toggle ("first"); el.classList.toggle ("second");});
+    </script>  
+  <footer> 
+   <p class="programminghero">Learned and developed this site with <a href="http://www.programming-hero.com">Programming Hero</a></p> 
+  </footer>
+ </body>
+</html>
